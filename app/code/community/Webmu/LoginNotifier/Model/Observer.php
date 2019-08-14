@@ -18,17 +18,17 @@
  */
 class Webmu_LoginNotifier_Model_Observer {
 
-    public function successLogin( $user) {
+    public function successLogin( $observer) {
     
-    	if ($user->getId()) {
+    	if ($observer->getEvent()->getUser()) {
 			$this->_addLoginNotification(array(
-					"username" => $user->getUsername(),
+					"username" => $observer->getEvent()->getUser()->getUsername(),
 					"result" => 1
 				)
 			);
 				
 			if( Mage::getStoreConfig('loginnotifier/success/general_success_login') == 'enabled'){
-				$this->sendSuccessNotificationEmail($user->getUsername());
+				$this->sendSuccessNotificationEmail($observer->getEvent()->getUser()->getUsername());
 			}
 		}
     }
