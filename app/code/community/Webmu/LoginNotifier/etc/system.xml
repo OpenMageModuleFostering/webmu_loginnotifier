@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<webmu translate="label" module="loginnotifier">
+            <label>WEBMU EXTENSIONS</label>
+            <sort_order>1600</sort_order>
+        </webmu>
+	  </tabs>
+	  <sections>
+    	<loginnotifier module="loginnotifier" translate="label">
+      		<class>separator-top</class>
+     		<label>Login Notifier</label>
+      		<tab>webmu</tab>
+      		<frontend_type>text</frontend_type>
+      		<sort_order>1110</sort_order>
+      		<show_in_default>1</show_in_default>
+      		<show_in_website>0</show_in_website>
+      		<show_in_store>0</show_in_store>
+      		<groups>
+                <success module="loginnotifier" translate="label">
+                    <label>Success Notification Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <expanded>1</expanded>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<general_success_login translate="label">
+              				<label>Notify Success Login</label>
+			                <frontend_type>select</frontend_type>
+			                <source_model>loginnotifier/system_config_source_general_option</source_model> 
+			                <sort_order>1</sort_order>
+			                <show_in_default>1</show_in_default>
+              				<show_in_website>0</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </general_success_login>
+			            <general_success_login_email translate="label">
+						    <label>Send Notification Email To</label>
+						    <comment>Comma-separated.</comment>
+            		        <frontend_type>text</frontend_type>
+		        		    <sort_order>5</sort_order>
+		            		<show_in_default>1</show_in_default>
+			            	<show_in_website>0</show_in_website>
+			            	<show_in_store>0</show_in_store>
+			            	<depends>
+                                <general_success_login>enabled</general_success_login>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </general_success_login_email>
+                    </fields>
+                </success>
+                <failed module="loginnotifier" translate="label">
+                    <label>Failed Notification Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <expanded>1</expanded>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<general_failed_login translate="label">
+						    <label>Notify Failed Login</label>
+						    <frontend_type>select</frontend_type>
+			                <source_model>loginnotifier/system_config_source_general_option</source_model> 
+			                <sort_order>1</sort_order>
+		            		<show_in_default>1</show_in_default>
+			            	<show_in_website>0</show_in_website>
+			            	<show_in_store>0</show_in_store>
+                        </general_failed_login>
+			            <general_failed_login_email translate="label">
+						    <label>Send Notification Email To</label>
+						    <comment>Comma-separated.</comment>
+            		        <frontend_type>text</frontend_type>
+		        		    <sort_order>5</sort_order>
+		            		<show_in_default>1</show_in_default>
+			            	<show_in_website>0</show_in_website>
+			            	<show_in_store>0</show_in_store>
+			            	<depends>
+                                <general_failed_login>enabled</general_failed_login>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </general_failed_login_email>
+                    </fields>
+                </failed>
+            </groups>
+        </loginnotifier>
+    </sections>
+</config>

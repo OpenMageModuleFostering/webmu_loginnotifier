@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+    <name>Webmu_LoginNotifier</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Login Notifier will send a mail whenever someone logs in to the Magento Backend.</summary>
+    <description>Sends an email with useful data to the administrator each time a user successfully logs in or fails to connect.&#xD;
+&#xD;
+The purpose of this plugin consists in improving the security of a Magento backend.&#xD;
+&#xD;
+When a user logs in successfully the extensions sends an email to the administrator with the date, user name, IP address and store all data into database.&#xD;
+&#xD;
+A Login Report is available on Reports menu in Magento Admin Panel.</description>
+    <notes>Release notes:&#xD;
+&#xD;
+0.1.0 - initial public release of Login Notifier</notes>
+    <authors><author><name>Webmu</name><user>webmu</user><email>info@webmu.it</email></author></authors>
+    <date>2016-02-01</date>
+    <time>09:37:51</time>
+    <contents><target name="magecommunity"><dir name="Webmu"><dir name="LoginNotifier"><dir name="Block"><dir name="Adminhtml"><dir name="Report"><file name="Grid.php" hash="025dff85a672824af43ec58124aba5ab"/></dir><file name="Report.php" hash="1447817f2ecf54a3a8edf576fb7c8dd8"/></dir></dir><dir name="Helper"><file name="Data.php" hash="8c064319279e925427261fa1e23cd9f8"/></dir><dir name="Model"><dir name="Admin"><file name="Session.php" hash="06efeddb8fc0a1a3e0bcc7c725a0061e"/></dir><dir name="Mysql4"><dir name="Report"><file name="Collection.php" hash="798f9f6277fe8cbe9e62138f24afce3b"/></dir><file name="Report.php" hash="a514d8ed7d920cb9dbb830864894fc91"/></dir><file name="Report.php" hash="bf80985e5de55e8b1796190edf4fca1b"/><file name="ResultOption.php" hash="50eb871000d878fb9c0df6ba8809ad75"/><dir name="System"><dir name="Config"><dir name="Source"><dir name="General"><file name="Option.php" hash="dbece10127ac2faf0b581b6b5a3066e9"/></dir></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="ReportController.php" hash="884f7ec59c7948e839caca36943b5429"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="3b6b78f4be94b9f63ca0405ea233e241"/><file name="config.xml" hash="b727541719f958d9c847b77205928068"/><file name="system.xml" hash="04b7c6c9e6ed6c9929f4fe46f5d1446e"/></dir><dir name="sql"><dir name="loginnotifier_setup"><file name="mysql4-install-0.1.0.php" hash="105c2a3fbf42e2ddd4a28a714336ed50"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webmu_LoginNotifier.xml" hash="60f9b8fda882b07a373e068dbda6b6e8"/></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><file name="loginnotifier_notificationemail_failed.html" hash="5ba49621b2b51205affd85696da01521"/><file name="loginnotifier_notificationemail_success.html" hash="870e9f04ce48a5f2e2a4b7aabaf929fc"/></dir></dir><file name="Webmu_LoginNotifier.csv" hash="9d10578f91f7a213f21b1c1d5cec599a"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
