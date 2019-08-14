@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<loginnotifier_adminhtml_report_index>
+		<reference name="content">
+	  		<block type="loginnotifier/adminhtml_report" name="report" />
+		</reference>
+  	</loginnotifier_adminhtml_report_index>
+</layout>

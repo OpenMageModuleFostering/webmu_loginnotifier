@@ -2,7 +2,7 @@
 <config>
 	<modules>
     	<Webmu_LoginNotifier>
-        	<version>0.1.0</version>
+        	<version>0.2.0</version>
     	</Webmu_LoginNotifier>
 	</modules>
   	<global>
@@ -29,11 +29,6 @@
 				</report>
         	</entities>
         </loginnotifier_mysql4>
-		<admin>
-			<rewrite>
-				<session>Webmu_LoginNotifier_Model_Admin_Session</session>
-			</rewrite>
-		</admin>
 	</models>
 	<resources>
 		<loginnotifier_setup>
@@ -82,6 +77,26 @@
 		</routers>
 	</admin>
   	<adminhtml>
+  		<events>
+            <admin_session_user_login_success>
+                <observers>
+                    <loginnotifier_success>
+	                    <type>singleton</type>
+                        <class>loginnotifier/observer</class>
+                        <method>successLogin</method>
+                    </loginnotifier_success>
+                </observers>
+            </admin_session_user_login_success>
+            <admin_session_user_login_failed>
+                <observers>
+                    <loginnotifier_failed>
+	                    <type>singleton</type>
+                        <class>loginnotifier/observer</class>
+                        <method>failedLogin</method>
+                    </loginnotifier_failed>
+                </observers>
+            </admin_session_user_login_failed>
+        </events>
 		<menu>
             <report>
                 <children>
