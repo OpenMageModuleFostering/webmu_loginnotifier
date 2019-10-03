@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Webmu_LoginNotifier",
+    "name": "OpenMageModuleFostering\/Webmu_LoginNotifier",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL-3.0)",
     "homepage": "",
     "description": "Login Notifier will send a mail if anyone reaches or attempts to login to the Magento Backend.",
     "authors": [
-    {
-        "name": "Webmu",
-        "email": "info@webmu.it"
-    }
-],
+        {
+            "name": "Webmu",
+            "email": "info@webmu.it"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
